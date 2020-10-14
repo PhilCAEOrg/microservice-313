@@ -81,9 +81,9 @@ public class Tes extends RESTService {
 
   @Api
   @SwaggerDefinition(
-      info = @Info(title = "313", version = "$Metadata_Version$",
-          description = "$Metadata_Description$",
-          termsOfService = "$Metadata_Terms$",
+      info = @Info(title = "313", version = "0.0.0",
+          description = "",
+          termsOfService = "",
           contact = @Contact(name = "", email = "CAEAddress@gmail.com") ,
           license = @License(name = "BSD",
               url = "https://github.com/PhilCAEOrg/microservice-313/blob/master/LICENSE.txt") ) )
@@ -92,7 +92,50 @@ public class Tes extends RESTService {
 
     private final Tes service = (Tes) Context.getCurrent().getService();
 
-    
+      /**
+   * 
+   * gtes
+   *
+   * 
+   *
+   * 
+   * @return Response 
+   * 
+   */
+  @GET
+  @Path("/gtes")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "tsd")
+  })
+  @ApiOperation(value = "gtes", notes = " ")
+  public Response gtes() {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // tsd
+    boolean tsd_condition = true;
+    if(tsd_condition) {
+      JSONObject tdhf = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_OK).entity(tdhf.toJSONString()).build();
+    }
+    return null;
+  }
+
+
 
   }
 
